@@ -29,10 +29,10 @@ function getCalculationMode() {
 while (numOfOperations >= 0) {
     printWelcomeMessage()
     var mode = getCalculationMode()
-    if (mode == '1') {
+    if (mode == ARITHMETIC_MODE) {
         console.log('Arithmetic mode selected')
         doArithmeticCalculation()
-    } else if ( mode == '2') {
+    } else if ( mode == VOWEL_COUNTING_MODE) {
         console.log('Vowel Counting mode selected')
         doVowelCountCalculation()
     }
