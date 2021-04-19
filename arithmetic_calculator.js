@@ -3,11 +3,11 @@ const readline = require("readline-sync");
 
 function getInputs() {
     inputs = [];
-    inputs[0] = getOperatorInput()
+    inputs[0] = getOperatorInput();
     if (inputs[0]) {
-        return getNumericalInputs(inputs)    
+        return getNumericalInputs(inputs);
     } else {
-        return null
+        return null;
     }
 }
 
@@ -15,10 +15,10 @@ function getOperatorInput() {
     console.log('\nPlease enter an operator (+, -, * or /):');
     operator = readline.prompt();
     if (operator === '+' || operator === '-' || operator === '*' || operator === '/') {
-        return operator
+        return operator;
     } else {
-        console.log('An invalid operator was given.')
-        return null
+        console.log('An invalid operator was given.');
+        return null;
     }
 }
 
@@ -37,13 +37,13 @@ function getNumericalInputs(inputs) {
         console.log('An invalid number of repetitions was given.');
         return null;
     }
-    return inputs
+    return inputs;
 }
 
 function valueIsNumber(value) {
     if (isNaN(value)) {
-        console.log('A non-numerical value was given.')
-        return false
+        console.log('A non-numerical value was given.');
+        return false;
     } else {
         return true;
     }
@@ -64,13 +64,13 @@ function calculate(inputArray) {
             var result = inputArray.slice(1).reduce((a, b) => a / b);
             break;
         }
-    return result
+    return result;
 }
             
 function doOneCalculation() {
-    inputArray = getInputs()
+    inputArray = getInputs();
     if (inputArray) { 
-        result = calculate(inputArray)
+        result = calculate(inputArray);
         console.log(`Result: ${result}`);
     }
 }

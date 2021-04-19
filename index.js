@@ -17,24 +17,24 @@ function getCalculationMode() {
     console.log('\nPlease select the calculator mode:\n1) Arithmetic\n2) Vowel Counting')
     const mode = Number(readline.prompt());
     if (mode == '1' || mode == '2') {
-        return mode
+        return mode;
     } else {
-        console.log('Invalid Calculation mode chosen.')
-        return null
+        console.log('Invalid Calculation mode chosen.');
+        return null;
     }
 
 }
 
 // Run calculator.
 while (numOfOperations >= 0) {
-    printWelcomeMessage()
-    var mode = getCalculationMode()
+    printWelcomeMessage();
+    var mode = getCalculationMode();
     if (mode == ARITHMETIC_MODE) {
-        console.log('Arithmetic mode selected')
-        doArithmeticCalculation()
-    } else if ( mode == VOWEL_COUNTING_MODE) {
-        console.log('Vowel Counting mode selected')
-        doVowelCountCalculation()
+        console.log('Arithmetic mode selected');
+        doArithmeticCalculation();
+    } else if (mode == VOWEL_COUNTING_MODE) {
+        console.log('Vowel Counting mode selected');
+        doVowelCountCalculation();
     }
-    numOfOperations += 1
+    numOfOperations += 1;
 }
