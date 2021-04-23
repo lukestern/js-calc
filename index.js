@@ -5,12 +5,8 @@ const doVowelCountCalculation = require("./vowel_calculator.js");
 const ARITHMETIC_MODE = '1';
 const VOWEL_COUNTING_MODE = '2';
 
-var numOfOperations = 0;
-
 function printWelcomeMessage() {
-    if (numOfOperations === 0) {
     console.log('\nWelcome to the Calculator!');
-    }
 }
 
 function getCalculationMode() {
@@ -26,8 +22,8 @@ function getCalculationMode() {
 }
 
 // Run calculator.
-while (numOfOperations >= 0) {
-    printWelcomeMessage();
+printWelcomeMessage();
+while (true) {
     var mode = getCalculationMode();
     if (mode == ARITHMETIC_MODE) {
         console.log('Arithmetic mode selected');
@@ -36,5 +32,4 @@ while (numOfOperations >= 0) {
         console.log('Vowel Counting mode selected');
         doVowelCountCalculation();
     }
-    numOfOperations += 1;
 }
